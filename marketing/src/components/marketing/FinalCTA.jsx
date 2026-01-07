@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRightIcon, CheckCircleIcon } from 'lucide-react';
+import { CheckCircleIcon } from 'lucide-react';
 import { Button } from '../ui/Button';
 
 export function FinalCTA() {
@@ -28,10 +28,6 @@ export function FinalCTA() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10">
-            Get Started Free
-            <ArrowRightIcon className="w-5 h-5 ml-2" />
-          </Button>
           <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10">
             Contact Us
           </Button>
