@@ -16,8 +16,7 @@ import {
   ArrowRight,
   Sparkles,
   Zap,
-  Facebook,
-  Twitter,
+  Youtube,
   Instagram,
   Linkedin,
   Mail,
@@ -258,13 +257,14 @@ export function App() {
                 <Zap className="w-5 h-5" />
               </span>
             </motion.a>
-            <motion.button 
+            <motion.a 
+              href="mailto:connect.info34@gmail.com"
               whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.1)' }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-white/5 text-white border border-white/10 rounded-full font-bold text-lg transition-all w-full sm:w-auto backdrop-blur-sm hover:border-white/20"
             >
               Contact Us
-            </motion.button>
+            </motion.a>
           </motion.div>
 
           {/* Stats */}
@@ -785,14 +785,15 @@ export function App() {
           <p className="text-lg md:text-xl text-gray-400 mb-10 px-4">
             Join thousands of IIT students already using IIT Connect to stay organized, connected, and successful.
           </p>
-          <motion.button 
+          <motion.a 
+            href="mailto:connect.info34@gmail.com"
             whileHover={{ scale: 1.05, boxShadow: '0 0 50px rgba(220, 38, 38, 0.5)' }}
             whileTap={{ scale: 0.95 }}
             className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 text-white rounded-full font-bold text-lg transition-all shadow-glow"
           >
             Contact Us
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </motion.button>
+          </motion.a>
 
           {/* Benefits */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-2xl mx-auto">
@@ -832,14 +833,15 @@ export function App() {
               </p>
               <div className="flex gap-3">
                 {[
-                  { Icon: Facebook, hover: 'hover:bg-blue-600' },
-                  { Icon: Twitter, hover: 'hover:bg-sky-500' },
-                  { Icon: Instagram, hover: 'hover:bg-pink-600' },
-                  { Icon: Linkedin, hover: 'hover:bg-blue-700' },
-                ].map(({ Icon, hover }, i) => (
+                  { Icon: Linkedin, hover: 'hover:bg-blue-700', href: 'https://www.linkedin.com/company/connect34/' },
+                  { Icon: Instagram, hover: 'hover:bg-pink-600', href: 'https://www.instagram.com/iit.connect?igsh=MTR0cmlnZHlqN3V4aQ==' },
+                  { Icon: Youtube, hover: 'hover:bg-red-600', href: 'https://www.youtube.com/@IITConnect' },
+                ].map(({ Icon, hover, href }, i) => (
                   <motion.a 
                     key={i}
-                    href="#" 
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer" 
                     whileHover={{ scale: 1.1, y: -2 }}
                     className={`w-10 h-10 bg-white/5 rounded-full flex items-center justify-center transition-colors border border-white/10 ${hover}`}
                   >
@@ -886,9 +888,11 @@ export function App() {
             <div>
               <h4 className="text-white font-semibold mb-4">Get in Touch</h4>
               <ul className="space-y-3 text-sm text-gray-500">
-                <li className="flex items-center gap-2">
-                  <Mail className="w-4 h-4 text-red-500" />
-                  <span>connect.info34@gmail.com</span>
+                <li>
+                  <a href="mailto:connect.info34@gmail.com" className="flex items-center gap-2 hover:text-red-400 transition-colors">
+                    <Mail className="w-4 h-4 text-red-500" />
+                    <span>connect.info34@gmail.com</span>
+                  </a>
                 </li>
                 <li>
                   <p>Informatics Institute of Technology</p>
