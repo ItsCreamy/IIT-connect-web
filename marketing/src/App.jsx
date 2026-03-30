@@ -245,7 +245,7 @@ export function App() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <motion.a 
-              href="https://youtu.be/pPfBLOnFYh0"
+              href="https://youtu.be/u2i69GD3NIg"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(220, 38, 38, 0.4)' }}
